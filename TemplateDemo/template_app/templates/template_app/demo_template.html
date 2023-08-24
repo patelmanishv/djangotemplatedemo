@@ -1,0 +1,17 @@
+{% extends 'template_app/base.html' %}
+
+{% block title %}Demo Page{% endblock %}
+
+{% block header %}Hello, {{ name }}!{% endblock %}
+
+{% block content %}
+    <p>You are {{ age }} years old.</p>
+    
+    {% if show_numbers %}
+        <ul>
+            {% for number in numbers %}
+                <li>{{ number }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
